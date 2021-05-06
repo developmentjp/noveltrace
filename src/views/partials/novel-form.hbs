@@ -1,0 +1,33 @@
+ <div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{this.name}}" placeholder="Novel Name" name="name">
+      <label for="floatingInput">Novel Name</label>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{this.author}}" placeholder="Author Name" name="author">
+      <label for="floatingInput">Author Name</label>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" value="{{this.chapters}}" placeholder="Number Of Chapters" name="chapters">
+      <label for="floatingInput">Number of Chapters</label>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{this.latest_chapter}}" placeholder="Latest Chapter Read" name="latest_chapter">
+      <label for="floatingInput">Latest Chapter Read</label>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="comments" style="height: 200px">{{this.comments}}</textarea>
+      <label for="comments">Comments</label>
+    </div>
+  </div>
+  <div class="col-12 d-grid">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>

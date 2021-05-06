@@ -1,0 +1,15 @@
+.home-btn--refresh {
+	margin-right: 5px;
+}
+@media screen and (max-width: 600px) {
+	.home-btn {
+		display: none;
+	}
+	.responsive-btn-table {
+		margin-bottom: 5px;
+	}
+	th,
+	td {
+		font-size: 11px;
+	}
+}

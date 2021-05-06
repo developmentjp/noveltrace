@@ -1,0 +1,52 @@
+{{#if removedUser}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  User has been removed.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+<div class="row">
+  <div class="col-6">
+    <h1>My Novel List</h1>
+  </div>
+  <div class="col-6 d-flex justify-content-end">
+    <a href="/dashboard" type="button" class="btn btn-secondary align-self-center  home-btn--refresh" style="display:flex;justify-content:center;align-items:center;"><i class="bi bi-arrow-repeat" style="margin-top: -3px;"></i>  
+   <span class="home-btn">&nbsp;Refresh List</span></a>
+    <a href="/dashboard/addnovel" type="button" class="btn btn-dark align-self-center" style="display:flex;justify-content:center;align-items:center;"><i class="bi bi-plus-square" style="margin-top: -3px;"></i>  <span class="home-btn">&nbsp;Add Novel</span>
+</a>
+  </div>
+</div>
+
+<div class="table-responsive">
+<table class="table table-borderless table-dark table-striped table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Chapters</th>
+      <th scope="col">Last Chapter Read</th>
+      <th scope="col" class="text-end">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.author}}</td>
+      <td>{{this.chapters}}</td>
+      <td>{{this.latest_chapter}}</td>
+      <td class="text-end">
+        <a href="/dashboard/viewnovel/{{this.id}}" type="button" class="btn btn-light btn-small responsive-btn-table"><i class="bi bi-eye"></i> <span class="home-btn">View</span> </a>
+        <a href="/dashboard/editnovel/{{this.id}}" type="button" class="btn btn-light btn-small responsive-btn-table"><i class="bi bi-pencil"></i>
+          <span class="home-btn">Edit</span> </a>
+        <a href="/dashboard/{{this.id}}" type="button" class="btn btn-danger btn-small"><i class="bi bi-trash"></i>  <span class="home-btn">Delete</span></a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
+</div>
