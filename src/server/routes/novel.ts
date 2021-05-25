@@ -9,11 +9,12 @@ import {
 	viewall,
 	deleteNovel,
 } from '../controllers/novelController';
+import authMiddleware from '../../middlewares/authMiddleware';
 
 const router: Router = express.Router();
 
 // CRUD
-router.get('/', view);
+router.get('/', authMiddleware.ensureAuth, view);
 router.post('/', find);
 router.get('/addnovel', form);
 router.post('/addnovel', create);

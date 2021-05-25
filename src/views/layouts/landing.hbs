@@ -28,7 +28,7 @@
   <div class="loadingio-spinner-blocks-nqc58835ofb "><div class="ldio-jyjdcofkrcm">
 <div style='left:38px;top:38px;animation-delay:0s'></div><div style='left:80px;top:38px;animation-delay:0.125s'></div><div style='left:122px;top:38px;animation-delay:0.25s'></div><div style='left:38px;top:80px;animation-delay:0.875s'></div><div style='left:122px;top:80px;animation-delay:0.375s'></div><div style='left:38px;top:122px;animation-delay:0.75s'></div><div style='left:80px;top:122px;animation-delay:0.625s'></div><div style='left:122px;top:122px;animation-delay:0.5s'></div>
 </div></div>
-<h3>Fetching User Information</h3>
+<h3 class="message">Fetching Resources...</h3>
 </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -45,6 +45,11 @@
         setTimeout(()=>{
           location.replace('/dashboard')
         },3000)
+        let message = document.querySelector('.message')
+        
+        setTimeout(()=>{
+          message.innerHTML = 'Checking Authentication...'
+        },1100)
       }
     </script>
 </body>
